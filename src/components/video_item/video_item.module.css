@@ -1,7 +1,15 @@
 .container {
-    width: 25%;
     padding: 1em;
     /* height: 18em; */
+}
+
+.container.grid {
+    width: 25%;
+}
+
+.container.list {
+    width: 100%;
+    padding: 0.2em;
 }
 
 .video {
@@ -14,6 +22,10 @@
     transition: transform 250ms ease-in;
 }
 
+.video.list {
+    display: flex;
+}
+
 .video:hover {
     transform: scale(1.02);
 }
@@ -23,9 +35,17 @@
     height: 100%;
 }
 
+.thumbnail.list {
+    width: 40%;
+}
+
 .metadata {
     margin-left: 3em;
-    margin-right: 1em;
+    margin-right: 0.5em;
+}
+
+.metadata.list {
+    margin-left: 0.5em;
 }
 
 .title,
