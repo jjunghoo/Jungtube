@@ -14,7 +14,17 @@ const VideoDetail = (props) => (
             allowFullScreen>
         </iframe>
         <h2>{props.video.snippet.title}</h2>
-        <h3>{props.video.snippet.channelTitle}</h3>
+        <div className={styles.channelTitle}>
+            {props.channels.map(channel => (
+                <img className={styles.channelImg} key={channel.id} src={channel.snippet.thumbnails.default.url} alt="channelImg" />
+            ))}
+            <div className={styles.channelInfo}>
+                <p>{props.video.snippet.channelTitle}</p>
+                {props.channels.map(channel => (
+                    <p className={styles.subscriberCount} key={channel.id}>{channel.statistics.subscriberCount}</p>
+                ))}
+            </div>
+        </div>
         <pre className={styles.description}>{props.video.snippet.description}</pre>
     </section>
 );

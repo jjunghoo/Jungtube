@@ -2,6 +2,35 @@
     padding: 0.2em;
 }
 
+.channelTitle {
+    display: flex;
+    align-items: center;
+    border-top: 1px solid rgb(199, 198, 198);
+    border-bottom: 1px solid rgb(199, 198, 198);
+    padding: 1em 0;
+
+}
+
+.channelImg {
+    border-radius: 50%;
+    width: 3rem;
+    height: 3rem;
+}
+
+.channelInfo {
+    margin-left: 0.5em;
+}
+
+.channelInfo p {
+    margin: 0;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.subscriberCount {
+    color: rgb(99, 97, 97);
+}
+
 .description {
     white-space: pre-wrap;
 }

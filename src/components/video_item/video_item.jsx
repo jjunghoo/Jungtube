@@ -5,7 +5,12 @@ const VideoItem = memo(
     (props) => {
         const displayType = props.display === 'list' ? styles.list : styles.grid;
         return (
-            <li className={`${styles.container} ${displayType}`} onClick={() => props.onVideoClick(props.video)}>
+            <li className={`${styles.container} ${displayType}`} 
+                onClick={() => {
+                    props.onVideoClick(props.video);
+                    props.onChannels(props.video.snippet.channelId);
+                }} 
+            >
                 <div className={`${styles.video} ${displayType}`}>
                     <img className={`${styles.thumbnail} ${displayType}`} src={props.video.snippet.thumbnails.medium.url} 
                         alt="video thumbnail"

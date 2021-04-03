@@ -9,7 +9,8 @@ const VideoList = (props) => (
                 key={video.id} 
                 video={video} 
                 onVideoClick={props.onVideoClick}
-                display={props.display} 
+                display={props.display}
+                onChannels={props.onChannels} 
             />
         ))}
     </ul>
