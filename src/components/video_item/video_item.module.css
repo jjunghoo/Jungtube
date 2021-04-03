@@ -1,0 +1,47 @@
+.container {
+    width: 25%;
+    padding: 1em;
+    /* height: 18em; */
+}
+
+.video {
+    /* display: flex; */
+    width: 100%;
+    /* height: 100%; */
+    align-items: center;
+    border: 1px solid lightgray;
+    cursor: pointer;
+    transition: transform 250ms ease-in;
+}
+
+.video:hover {
+    transform: scale(1.02);
+}
+
+.thumbnail {
+    width: 100%;
+    height: 100%;
+}
+
+.metadata {
+    margin-left: 3em;
+    /* height: 6em; */
+}
+
+.title,
+.channel {
+    margin: 0;
+}
+
+.title {
+    font-size: 0.8rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 90%;
+    height: 40px;
+}
+
+.channel {
+    font-size: 0.6rem;
+}
