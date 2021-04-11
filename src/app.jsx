@@ -8,6 +8,15 @@ function App({youtube}) {
   const [videos, setVideos] = useState([]);
   const [selectedVideo, setSelectedVideo] = useState(null);
   const [channels, setChnnels] = useState([]);
+  const [comment, setComment] = useState([]);
+
+  const getComment = (videoId) => {
+    youtube
+      .Comment(videoId) //
+      .then(comments => {
+        setComment(comments)
+      });
+  };
 
   const getChnnels = (channelId) => {
     youtube
@@ -31,7 +40,7 @@ function App({youtube}) {
         });
     }, [youtube]
   );
-
+  
   useEffect(() => {
     youtube
       .mostPopular() //
@@ -45,11 +54,17 @@ function App({youtube}) {
       <section className={styles.content}>
         {selectedVideo && (
           <div className={styles.detail}>
-            <VideoDetail video={selectedVideo} channels={channels} />
+            <VideoDetail video={selectedVideo} channels={channels} comments={comment} />
           </div>
         )}
         <div className={styles.list}>
-          <VideoList videos={videos} onVideoClick={selectVideo} display={selectedVideo? 'list' : 'grid'} onChannels={getChnnels} />
+          <VideoList 
+            videos={videos} 
+            onVideoClick={selectVideo} 
+            display={selectedVideo? 'list' : 'grid'} 
+            onChannels={getChnnels}  
+            onComment={getComment} 
+          />
         </div>
       </section>
     </div>

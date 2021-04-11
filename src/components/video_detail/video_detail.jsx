@@ -26,6 +26,22 @@ const VideoDetail = (props) => (
             </div>
         </div>
         <pre className={styles.description}>{props.video.snippet.description}</pre>
+        <div className={styles.comment}>
+            <h3>댓글</h3>
+        </div>
+        <div className={styles.replys}>
+            {props.comments.map(comment => (
+                <div className={styles.reply} key={comment.etag}>
+                    <img className={styles.authorProfileImg} src={comment.snippet.topLevelComment.snippet.authorProfileImageUrl} alt="authorProfileImageUrl"/>
+                    <div className={styles.reply__content}>
+                        <p className={styles.textOriginal}>{comment.snippet.topLevelComment.snippet.textOriginal}</p>
+                        <i className="fas fa-thumbs-up"></i>
+                        <span>{comment.snippet.topLevelComment.snippet.likeCount}</span>
+
+                    </div>
+                </div>
+            ))}
+        </div>
     </section>
 );
 

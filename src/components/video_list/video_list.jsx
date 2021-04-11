@@ -11,6 +11,7 @@ const VideoList = (props) => (
                 onVideoClick={props.onVideoClick}
                 display={props.display}
                 onChannels={props.onChannels} 
+                onComment={props.onComment}
             />
         ))}
     </ul>

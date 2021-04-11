@@ -9,6 +9,7 @@ const VideoItem = memo(
                 onClick={() => {
                     props.onVideoClick(props.video);
                     props.onChannels(props.video.snippet.channelId);
+                    props.onComment(props.video.id);
                 }} 
             >
                 <div className={`${styles.video} ${displayType}`}>
