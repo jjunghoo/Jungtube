@@ -76,3 +76,23 @@
     font-size: 0.8rem;
     margin-top: 0.5rem;
 }
+
+@media screen and (max-width: 48rem) {
+    .container.grid {
+        width: 100%;
+        padding: 0.1em;
+    }
+
+    .video {
+        display: flex;
+    }
+    
+    .thumbnail {
+        width: 40%;
+    }
+
+    .metadata {
+        margin-left: 0.5em;
+        margin-right: 0;
+    } 
+}
