@@ -93,11 +93,16 @@ svg {
 
 .displayBlock {
     display: block;
+    padding: 0.5em 0;
 }
 
 .replies {
     display: flex;
     padding: 0.6em 0;
+}
+
+.replyInfo {
+    display: flex;
 }
 
 .replies__authorProfileImg {

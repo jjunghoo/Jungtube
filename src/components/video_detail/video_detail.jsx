@@ -49,14 +49,17 @@ const VideoDetail = (props) => {
                         <p className={styles.showReplies} onClick={onReply}>댓글 더보기</p>
                         <div>
                             {comment.replies && comment.replies.comments.map(reply => ( 
-                                (comment.id === reply.snippet.parentId ? (<div className={`${styleType}`} key={reply.id}>
-                                    <img className={styles.replies__authorProfileImg} src={reply.snippet.authorProfileImageUrl} alt="authorProfileImageUrl"/>
-                                    <div className={styles.replies__content}>
-                                        <p className={styles.replies_authorDisplayName}>{reply.snippet.authorDisplayName}</p>
-                                        <p className={styles.replies_textOriginal}>{reply.snippet.textOriginal}</p>
-                                        <i className="fas fa-thumbs-up"></i>
-                                        <span className={styles.likeCount}>{reply.snippet.likeCount}</span>
-                                    </div>
+                                (comment.id === reply.snippet.parentId ? (
+                                <div className={`${styleType}`} key={reply.id}>
+                                    <div className={styles.replyInfo}>
+                                        <img className={styles.replies__authorProfileImg} src={reply.snippet.authorProfileImageUrl} alt="authorProfileImageUrl"/>
+                                        <div className={styles.replies__content}>
+                                            <p className={styles.replies_authorDisplayName}>{reply.snippet.authorDisplayName}</p>
+                                            <p className={styles.replies_textOriginal}>{reply.snippet.textOriginal}</p>
+                                            <i className="fas fa-thumbs-up"></i>
+                                            <span className={styles.likeCount}>{reply.snippet.likeCount}</span>
+                                        </div>
+                                    </div>   
                                 </div>) : null)
                             ))}
                         </div>
