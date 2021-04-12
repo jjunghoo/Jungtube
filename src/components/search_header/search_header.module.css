@@ -4,6 +4,8 @@
     padding: 0.8em 1em;
     background-color: black;
     color: white;
+    position: fixed;
+    width: 100%;
 }
 
 .logo {
@@ -29,6 +31,13 @@
     border-top-right-radius: 3px;
     border-bottom-right-radius: 3px;
     outline: 0;
+    padding: 0 1.3em;
+}
+
+.button svg {
+    color: #514f4f;
+    height: 100%;
+    font-size: 1.4em;
 }
 
 .buttonImg {
